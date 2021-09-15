@@ -58,7 +58,7 @@ namespace Dii_OrderingSvc
                         RequireSignedTokens = false
                     };
                 });
-
+            services.AddHealthChecks();
             services.AddControllers()
                 .AddNewtonsoftJson(options =>
                 options.SerializerSettings.Converters.Add(new Newtonsoft.Json.Converters.StringEnumConverter()));
@@ -102,6 +102,7 @@ namespace Dii_OrderingSvc
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/hc");
             });
         }
     }
