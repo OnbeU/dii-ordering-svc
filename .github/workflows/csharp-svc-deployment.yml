@@ -31,6 +31,7 @@ jobs:
         PACT_BROKER_BASE_URL: ${{ secrets.PACT_BROKER_BASE_URL }}
         PACT_BROKER_TOKEN: ${{ secrets.PACT_BROKER_TOKEN }}
         PACT_PACTICIPANT: 'dii-ordering-svc'
+        VERIFY_PROVIDER_PACT: 'false'
     
     - name: 'Build and Deploy Apps'
       id: publishapp
