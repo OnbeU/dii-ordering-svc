@@ -1,5 +1,5 @@
 ﻿using System.Text.Json.Serialization;
-
+//comment
 namespace Dii_OrderingSvc.Data
 {
     public class Booking
